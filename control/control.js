@@ -1,6 +1,10 @@
 
 let cart = [];
 
+
+
+
+
 function addToCart() {
     const userInput = document.getElementById('userInput');
     const item  =  userInput.value;
@@ -19,9 +23,11 @@ function createTodo(item) {
     cart.push({
         name: item,
     })
+
+    saveArrayList();
 }
 
-function Render(){4
+function Render(){
   let cartList = document.getElementById('renderHere');
   cartList.innerHTML = '';
 
@@ -48,6 +54,8 @@ function addDeleteButton(cartItem){
    });
    
    cartItem.appendChild(deleteBtn); //add delete to each cartItem
+
+   saveArrayList();
 }
 
 
@@ -55,4 +63,17 @@ function handleKeyPress(event) {
   if (event.key === 'Enter') {
     addToCart();
   }
+}
+
+function saveArrayList(){
+  localStorage.setItem('storedItems',JSON.stringify(cart))
+}
+
+const arrayList = JSON.parse(localStorage.getItem('storedItems'));//retrieving Json strings and converting them to array of objects using
+                                                                  //JSON.parse()
+
+if(Array.isArray(arrayList)){
+  cart = arrayList;
+}else {
+  alert('Nothing to display!')
 }
