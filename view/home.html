@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/control/control.js"> 
+    //   const resizeOps = () => {
+    //     document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+    //     };
+    //     resizeOps();
+    //     window.addEventListener("resize", resizeOps);
+    </script>
+
+</head>
+<body>
+    <header> <p class="topHeader"> Track your Days </p> </header>
+    
+
+    <main> 
+        <div class="container"> 
+            <input 
+            class="custom-input"
+            type="text" 
+            id="userInput" 
+            onkeypress="handleKeyPress(event)" 
+            placeholder="Type here"
+            >
+    
+            <button class="submit-button" onclick="addToCart()"> Push </button>
+        </div>
+        <!-- user inputs are rendered here -->
+      
+        <ul class="centerTodo" id="renderHere"> 
+        </ul>
+
+      
+    </main>
+    
+    </footer>
+    <div class="footer">
+        <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        
+        <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
+        
+        <div class="row">
+        Kabs Copyright © 2023 Inferno - All rights reserved 
+        </div>
+        </div>
+
+</footer>
+</body>
+</html>
